@@ -1,0 +1,19 @@
+
+<h1> Welcome to </h1>
+
+<h1 class="heading" [ngClass]="textColor === 'red'?'red-color': textColor==='green'?'green-color': textColor =='blue'?'blue-color':''">Angular Application</h1>
+<h1 class="heading" [ngClass]="{'red-color': textColor=='red', 'green-color': textColor=='green', 'blue-color':textColor=='blue'}">Angular Application</h1>
+<h1 class="heading" [ngClass]="['red-color', 'green-color']">Angular Application</h1>
+ <h1 class="heading" [ngClass]="{'red':'red-color', 'green':'green-color', 'blue':'blue-color'}[textColor]">Angular Application</h1>
+ <h1 class="heading" [ngClass]="{'blue-color, red-color': == 'red', 'blue-color, green-color': textColor == 'green-color', 'red-color, blue-color': textColor=='blue'}">Angular Application</h1>
+
+
+
+
+<div class="btn-container">
+  <button class="btn-red btn" (click)="changeColor('red')"> Red</button>
+  <button class="btn-green btn" (click)="changeColor('green')"> Green</button>
+  <button class="btn-blue btn" (click)="changeColor('blue')"> Blue</button>
+</div>
+
+<router-outlet></router-outlet>
